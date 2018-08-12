@@ -4,6 +4,12 @@
   --cymbalshinelight: #FFD7B2;
   --cymbalshinedark: #846E5B;
   --cymbalcenter: #605040;
+  --drumskin: #fff8ed;
+  --drumbody: #4488ed;
+  --drumhighlight2: #5498f7;
+  --drumhighlight3: #488ff2;
+  --drumhighlight1: #60a1f7;
+  --drumborder: #bcbcbc;
 }
 
 body {
@@ -32,7 +38,7 @@ body {
   transition: transform 0.2s;
 }
 
-.cymbal-hihat:hover, .cymbal-openhat:hover {
+.cymbal-hihat:hover, .cymbal-openhat:hover, .drum-tom:hover {
   transform: translateY(5px);
 }
 
@@ -88,4 +94,37 @@ body {
 
 .cymbal-shape-shadow {
   box-shadow: inset 0px 0px 0px 10px var(--cymbalborder), -5px 5px 5px rgba(0,0,0,0.5);
+}
+
+.drum-tom {
+  position: absolute;
+  top: 125px;
+  left: 268px;
+  transition: transform 0.2s;
+}
+
+.drum-skin {
+  background: var(--drumskin);
+  border-radius: 50%;
+  width: 150px;
+  height: 90px;
+  border: 3px solid var(--drumborder);
+  transform: rotate(-10deg);
+  box-shadow: 0px 3px 0px var(--drumborder),
+              0px 6px 0px #444444,
+              0px 9px 0px #444444,
+              0px 12px 0px var(--drumbody),
+              0px 18px 0px var(--drumbody),
+              0px 24px 0px var(--drumbody),
+              0px 30px 0px var(--drumbody),
+              0px 33px 0px var(--drumbody),
+              0px 36px 0px var(--drumhighlight3),
+              0px 39px 0px var(--drumhighlight2),
+              0px 42px 0px var(--drumhighlight1),
+              0px 45px 0px var(--drumhighlight2),
+              0px 48px 0px var(--drumhighlight3),
+              0px 54px 0px var(--drumbody),
+              0px 60px 0px var(--drumbody),
+              0px 66px 0px var(--drumbody),
+              0px 72px 0px var(--drumbody);
 }
