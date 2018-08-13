@@ -11,6 +11,10 @@
   --drumhighlight1: #60a1f7;
   --drumborder: #bcbcbc;
   --drumborderdark: #545454;
+  --kickbody: #cc3f3f;
+  --kickhighlight1: #d87979;
+  --kickhighlight2: #d36b6b;
+  --kickhighlight3: #cc4f4f;
 }
 
 body {
@@ -25,10 +29,18 @@ body {
   position: relative;
   width: 800px;
   height: 600px;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
-/* //////  CYMBALS LEFT //////// */
+.cymbal-hihat:hover, .cymbal-openhat:hover, .drum-tom:hover, .drum-snare:hover, .cymbal-ride:hover {
+  transform: translateY(5px);
+}
+
+.drum-kick:hover {
+  transform: translateY(-5px);
+}
+
+/* //////  CYMBALS LEFT (HIHAT AND OPENHAT) //////// */
 
 .cymbal-hihat {
   position: absolute;
@@ -42,10 +54,6 @@ body {
   top: 10px;
   left: 132px;
   transition: transform 0.2s;
-}
-
-.cymbal-hihat:hover, .cymbal-openhat:hover, .drum-tom:hover, .drum-snare:hover {
-  transform: translateY(5px);
 }
 
 .cymbal-center {
@@ -100,22 +108,81 @@ body {
 }
 
 .cymbal-shape-shadow {
-  box-shadow: inset 0px 0px 0px 15px var(--cymbalborder), -5px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 0px 21px var(--cymbalborder), 2px 8px 5px rgba(0,0,0,0.4);
 }
 
+/* //////  CYMBAL RIGHT (RIDE) //////// */
 
-/* //////// DRUMS LEFT ///////// */
+.cymbal-ride {
+  position: absolute;
+  top: 10px;
+  left: 500px;
+  transition: transform 0.2s;
+}
+
+.cymbal-ride-center {
+  background: var(--cymbalcenter);
+  border-radius: 50%;
+  width: 17px;
+  height: 14px;
+  position: absolute;
+  left: 96px;
+  top: 61px;
+  transform: rotate(-10deg);
+}
+
+.cymbal-ride-light {
+  background: var(--cymbalshinelight);
+  width: 189px;
+  height: 23px;
+  transform: rotate(15deg);
+  position: absolute;
+  top: 57px;
+  left: 14px;
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0px -2px 4px 0px var(--cymbalshinelight), -2px 2px 4px 0px var(--cymbalshinelight);
+  opacity: 0.6;
+}
+
+.cymbal-ride-dark {
+  background: var(--cymbalshinedark);
+  width: 158px;
+  height: 13px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 65px;
+  left: 28px;
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0px -2px 4px 0px var(--cymbalshinedark), -2px 2px 4px 0px var(--cymbalshinedark);
+  opacity: 0.5;
+}
+
+.cymbal-ride-shape {
+  background: var(--cymbal);
+  border-radius: 50%;
+  width: 210px;
+  height: 145px;
+  transform: rotate(-10deg);
+}
+
+.cymbal-ride-shape {
+  box-shadow: inset 0px 0px 0px 24px var(--cymbalborder), 2px 8px 5px rgba(0,0,0,0.4);
+}
+
+/* //////// DRUMS LEFT (TOM AND SNARE) ///////// */
 
 .drum-tom {
   position: absolute;
-  top: 125px;
-  left: 268px;
+  top: 114px;
+  left: 244px;
   transition: transform 0.2s;
 }
 
 .drum-snare {
   position: absolute;
-  top: 242px;
+  top: 236px;
   left: 131px;
   transition: transform 0.2s;
 }
@@ -142,7 +209,8 @@ body {
               0px 54px 0px var(--drumbody),
               0px 60px 0px var(--drumbody),
               0px 66px 0px var(--drumbody),
-              0px 72px 0px var(--drumbody);
+              0px 72px 0px var(--drumbody),
+              2px 78px 5px rgba(0,0,0,0.4);
 }
 
 .drum-snare .drum-skin {
@@ -249,7 +317,37 @@ body {
   border-radius: 25% 0 27% 17%;
 }
 
+/* /////////// CENTRE - KICK DRUM ///////// */
 
+.drum-kick {
+  position: absolute;
+  top: 241px;
+  left: 328px;
+  transition: transform 0.2s;
+}
 
-
+.drum-kick-skin {
+  background: var(--drumskin);
+  border-radius: 50%;
+  width: 250px;
+  height: 107px;
+  border: 3px solid var(--drumborder);
+  transform: rotate(184deg);
+  box-shadow: 0px 7px 0px var(--drumborder),
+              0px 14px 0px var(--drumborderdark),
+              0px 21px 0px var(--drumborder),
+              0px 28px 0px var(--kickbody),
+              0px 35px 0px var(--kickbody),
+              0px 42px 0px var(--kickbody),
+              0px 49px 0px var(--kickbody),
+              0px 56px 0px var(--kickhighlight3),
+              0px 63px 0px var(--kickhighlight2),
+              0px 70px 0px var(--kickhighlight1),
+              0px 77px 0px var(--kickhighlight2),
+              0px 84px 0px var(--kickhighlight3),
+              0px 91px 0px var(--kickbody),
+              0px 98px 0px var(--kickbody),
+              0px 105px 0px var(--kickbody),
+              0px 112px 0px var(--kickbody),
+              -3px -6px 10px rgba(0,0,0,0.4);
 }
