@@ -128,7 +128,7 @@ body {
   position: absolute;
   left: 96px;
   top: 61px;
-  transform: rotate(-10deg);
+  transform: rotate(10deg);
 }
 
 .cymbal-ride-light {
