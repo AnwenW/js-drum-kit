@@ -351,3 +351,48 @@ body {
               0px 112px 0px var(--kickbody),
               -3px -6px 10px rgba(0,0,0,0.4);
 }
+
+.drum-kick-clip1, .drum-kick-clip2, .drum-kick-clip3, .drum-kick-clip4, .drum-kick-clip5, .drum-kick-clip6 {
+  background: var(--drumborder);
+  width: 9px;
+  height: 34px;
+  border-right: 1.5px solid var(--drumborderdark);
+  transform: rotate(6deg);
+  position: absolute;
+}
+
+.drum-kick-clip1 {
+  left: 62px;
+  top: -111px;
+  border-radius: 50% 15% 25% 15%;
+}
+
+.drum-kick-clip2 {
+  left: 150px;
+  top: -113px;
+  border-radius: 15%;
+}
+
+.drum-kick-clip3 {
+  left: 230px;
+  top: -88px;
+  border-radius: 15% 50% 0% 30%;
+}
+
+.drum-kick-clip4 {
+  left: 54px;
+  top: -44px;
+  border-radius: 50% 15% 0% 25%;
+}
+
+.drum-kick-clip5 {
+  left: 143px;
+  top: -47px;
+  border-radius: 15%;
+}
+
+.drum-kick-clip6 {
+  left: 223px;
+  top: -23px;
+  border-radius: 15% 50% 0% 50%;
+}
