@@ -10,6 +10,7 @@
   --drumhighlight3: #488ff2;
   --drumhighlight1: #60a1f7;
   --drumborder: #bcbcbc;
+  --drumborderdark: #545454;
 }
 
 body {
@@ -31,15 +32,15 @@ body {
 
 .cymbal-hihat {
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 115px;
+  left: 20px;
   transition: transform 0.2s;
 }
 
 .cymbal-openhat {
   position: absolute;
-  top: 29px;
-  left: 184px;
+  top: 10px;
+  left: 132px;
   transition: transform 0.2s;
 }
 
@@ -50,22 +51,22 @@ body {
 .cymbal-center {
   background: var(--cymbalcenter);
   border-radius: 50%;
-  width: 12px;
-  height: 10px;
+  width: 15px;
+  height: 12px;
   position: absolute;
-  left: 69px;
-  top: 40px;
+  left: 84px;
+  top: 52px;
   transform: rotate(-10deg);
 }
 
 .cymbal-shine-light {
   background: var(--cymbalshinelight);
-  width: 134px;
-  height: 16px;
+  width: 171px;
+  height: 23px;
   transform: rotate(15deg);
   position: absolute;
-  top: 37px;
-  left: 9px;
+  top: 49px;
+  left: 13px;
   border-top-left-radius: 16px;
   border-bottom-right-radius: 16px;
   box-shadow: 0px -2px 4px 0px var(--cymbalshinelight), -2px 2px 4px 0px var(--cymbalshinelight);
@@ -74,28 +75,28 @@ body {
 
 .cymbal-shine-dark {
   background: var(--cymbalshinedark);
-  width: 101px;
-  height: 9px;
+  width: 144px;
+  height: 13px;
   transform: rotate(45deg);
   position: absolute;
-  top: 41px;
+  top: 58px;
   left: 25px;
   border-top-left-radius: 16px;
   border-bottom-right-radius: 16px;
   box-shadow: 0px -2px 4px 0px var(--cymbalshinedark), -2px 2px 4px 0px var(--cymbalshinedark);
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .cymbal-shape, .cymbal-shape-shadow {
   background: var(--cymbal);
   border-radius: 50%;
-  width: 150px;
-  height: 90px;
+  width: 190px;
+  height: 129px;
   transform: rotate(-10deg);
 }
 
 .cymbal-shape {
-  box-shadow: inset 0px 0px 0px 15px var(--cymbalborder);
+  box-shadow: inset 0px 0px 0px 21px var(--cymbalborder);
 }
 
 .cymbal-shape-shadow {
@@ -114,7 +115,7 @@ body {
 
 .drum-snare {
   position: absolute;
-  top: 216px;
+  top: 242px;
   left: 131px;
   transition: transform 0.2s;
 }
@@ -127,7 +128,7 @@ body {
   border: 3px solid var(--drumborder);
   transform: rotate(-10deg);
   box-shadow: 0px 3px 0px var(--drumborder),
-              0px 8px 0px #545454,
+              0px 8px 0px var(--drumborderdark),
               0px 14px 0px var(--drumborder),
               0px 18px 0px var(--drumbody),
               0px 24px 0px var(--drumbody),
@@ -165,4 +166,90 @@ body {
 .drum-snare .drum-shine {
   left: 55px;
   top: 120px;
+}
+
+.drum-clip1, .drum-clip2, .drum-clip3, .drum-clip4, .drum-clip5, .drum-clip6 {
+  background: var(--drumborder);
+  width: 7px;
+  height: 25px;
+  border-right: 1.5px solid var(--drumborderdark);
+  transform: rotate(-10deg);
+  position: absolute;
+}
+
+.drum-snare .drum-clip1 {
+  left: 24px;
+  top: 108px;
+  border-bottom-left-radius: 50%;
+}
+
+.drum-snare .drum-clip2 {
+  left: 90px;
+  top: 116px;
+  border-radius: 50% 0 17% 17%;
+}
+
+.drum-snare .drum-clip3 {
+  left: 150px;
+  top: 94px;
+  border-radius: 52% 0 27% 17%;
+}
+
+.drum-snare .drum-clip4 {
+  left: 32px;
+  top: 148px;
+  border-radius: 17% 30% 10% 50%;
+}
+
+.drum-snare .drum-clip5 {
+  left: 97px;
+  top: 157px;
+  border-radius: 17%;
+}
+
+.drum-snare .drum-clip6 {
+  left: 157px;
+  top: 135px;
+  border-radius: 25% 0 27% 17%;
+}
+
+.drum-tom .drum-clip1 {
+  left: 24px;
+  top: 98px;
+  border-bottom-left-radius: 50%;
+}
+
+.drum-tom .drum-clip2 {
+  left: 86px;
+  top: 103px;
+  border-radius: 50% 0 17% 17%;
+}
+
+.drum-tom .drum-clip3 {
+  left: 139px;
+  top: 78px;
+  border-radius: 52% 0 27% 17%;
+}
+
+.drum-tom .drum-clip4 {
+  left: 32px;
+  top: 139px;
+  border-radius: 17% 30% 10% 50%;
+}
+
+.drum-tom .drum-clip5 {
+  left: 93px;
+  top: 144px;
+  border-radius: 17%;
+}
+
+.drum-tom .drum-clip6 {
+  left: 146px;
+  top: 120px;
+  border-radius: 25% 0 27% 17%;
+}
+
+
+
+
 }
