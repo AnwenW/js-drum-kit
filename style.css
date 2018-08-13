@@ -133,28 +133,27 @@ body {
 
 .cymbal-ride-light {
   background: var(--cymbalshinelight);
-  width: 189px;
+  width: 204px;
   height: 23px;
   transform: rotate(15deg);
   position: absolute;
   top: 57px;
-  left: 14px;
-  border-top-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+  left: 5px;
+  border-radius: 8px;
   box-shadow: 0px -2px 4px 0px var(--cymbalshinelight), -2px 2px 4px 0px var(--cymbalshinelight);
   opacity: 0.6;
 }
 
 .cymbal-ride-dark {
   background: var(--cymbalshinedark);
-  width: 158px;
+  width: 180px;
   height: 13px;
   transform: rotate(45deg);
   position: absolute;
-  top: 65px;
-  left: 28px;
-  border-top-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+  top: 66px;
+  left: 18px;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
   box-shadow: 0px -2px 4px 0px var(--cymbalshinedark), -2px 2px 4px 0px var(--cymbalshinedark);
   opacity: 0.5;
 }
@@ -164,7 +163,7 @@ body {
   border-radius: 50%;
   width: 210px;
   height: 145px;
-  transform: rotate(-10deg);
+  transform: rotate(10deg);
 }
 
 .cymbal-ride-shape {
