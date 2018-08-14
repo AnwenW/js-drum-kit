@@ -44,15 +44,15 @@ body {
 
 .cymbal-hihat {
   position: absolute;
-  top: 115px;
+  top: 108px;
   left: 20px;
   transition: transform 0.2s;
 }
 
 .cymbal-openhat {
   position: absolute;
-  top: 10px;
-  left: 132px;
+  top: 0px;
+  left: 125px;
   transition: transform 0.2s;
 }
 
@@ -95,19 +95,12 @@ body {
   opacity: 0.5;
 }
 
-.cymbal-shape, .cymbal-shape-shadow {
+.cymbal-shape {
   background: var(--cymbal);
   border-radius: 50%;
   width: 190px;
   height: 129px;
   transform: rotate(-10deg);
-}
-
-.cymbal-shape {
-  box-shadow: inset 0px 0px 0px 21px var(--cymbalborder);
-}
-
-.cymbal-shape-shadow {
   box-shadow: inset 0px 0px 0px 21px var(--cymbalborder), 2px 8px 5px rgba(0,0,0,0.4);
 }
 
@@ -174,15 +167,15 @@ body {
 
 .drum-tom {
   position: absolute;
-  top: 114px;
-  left: 244px;
+  top: 101px;
+  left: 256px;
   transition: transform 0.2s;
 }
 
 .drum-snare {
   position: absolute;
-  top: 236px;
-  left: 131px;
+  top: 225px;
+  left: 145px;
   transition: transform 0.2s;
 }
 
@@ -320,8 +313,8 @@ body {
 
 .drum-kick {
   position: absolute;
-  top: 241px;
-  left: 328px;
+  top: 336px;
+  left: 303px;
   transition: transform 0.2s;
 }
 
@@ -394,4 +387,13 @@ body {
   left: 223px;
   top: -23px;
   border-radius: 15% 50% 0% 50%;
+}
+
+/* ///////// DRUM RIGHT - BOOM ///////// */
+
+.drum-boom {
+  position: absolute;
+  top: 200px;
+  left: 560px;
+  transition: transform 0.2s;
 }
