@@ -29,10 +29,10 @@ body {
   position: relative;
   width: 800px;
   height: 600px;
-  margin: 40px auto;
+  margin: 15vh auto;
 }
 
-.cymbal-hihat:hover, .cymbal-openhat:hover, .drum-tom:hover, .drum-snare:hover, .cymbal-ride:hover {
+.cymbal-hihat:hover, .cymbal-openhat:hover, .drum-tom:hover, .drum-snare:hover, .cymbal-ride:hover, .drum-tom2:hover {
   transform: translateY(5px);
 }
 
@@ -108,8 +108,8 @@ body {
 
 .cymbal-ride {
   position: absolute;
-  top: 10px;
-  left: 500px;
+  top: 3px;
+  left: 520px;
   transition: transform 0.2s;
 }
 
@@ -219,7 +219,7 @@ body {
   position: absolute;
   left: 46px;
   top: 107px;
-  filter: blur(4px);
+  filter: blur(5px);
   transform: rotate(-10deg);
 }
 
@@ -330,13 +330,13 @@ body {
               0px 21px 0px var(--drumborder),
               0px 28px 0px var(--kickbody),
               0px 35px 0px var(--kickbody),
-              0px 42px 0px var(--kickbody),
-              0px 49px 0px var(--kickbody),
-              0px 56px 0px var(--kickhighlight3),
+              0px 42px 0px var(--kickhighlight3),
+              0px 49px 0px var(--kickhighlight2),
+              0px 56px 0px var(--kickhighlight1),
               0px 63px 0px var(--kickhighlight2),
-              0px 70px 0px var(--kickhighlight1),
-              0px 77px 0px var(--kickhighlight2),
-              0px 84px 0px var(--kickhighlight3),
+              0px 70px 0px var(--kickhighlight3),
+              0px 77px 0px var(--kickbody),
+              0px 84px 0px var(--kickbody),
               0px 91px 0px var(--kickbody),
               0px 98px 0px var(--kickbody),
               0px 105px 0px var(--kickbody),
@@ -389,11 +389,75 @@ body {
   border-radius: 15% 50% 0% 50%;
 }
 
-/* ///////// DRUM RIGHT - BOOM ///////// */
-
-.drum-boom {
+.drum-kick-shine {
+  width: 30px;
+  height: 75px;
+  border-radius: 25%;
+  background: rgba(255,255,255,0.5);
   position: absolute;
-  top: 200px;
-  left: 560px;
+  left: 89px;
+  top: -95px;
+  filter: blur(7px);
+  transform: rotate(10deg);
+}
+
+/* ///////// DRUMS RIGHT - TOM2 AND BOOM ///////// */
+
+.drum-tom2 {
+  position: absolute;
+  top: 100px;
+  left: 445px;
   transition: transform 0.2s;
+}
+
+.drum-tom2 .drum-skin {
+  transform: rotate(10deg);
+}
+
+.drum-tom2 .drum-clip1 {
+  left: 7px;
+  top: 79px;
+  transform: rotate(10deg);
+  border-radius: 0% 0% 15% 50%;
+}
+
+.drum-tom2 .drum-clip2 {
+  left: 64px;
+  top: 103px;
+  transform: rotate(10deg);
+  border-radius: 40% 0 15% 15%;
+}
+
+.drum-tom2 .drum-clip3 {
+  left: 124px;
+  top: 96px;
+  transform: rotate(10deg);
+  border-radius: 60% 0% 30% 15%;
+}
+
+.drum-tom2 .drum-clip4 {
+  left: -1px;
+  top: 118px;
+  transform: rotate(10deg);
+  border-radius: 35% 15% 0% 50%;
+}
+
+.drum-tom2 .drum-clip5 {
+  left: 57px;
+  top: 144px;
+  transform: rotate(10deg);
+  border-radius: 15%;
+}
+
+.drum-tom2 .drum-clip6 {
+  left: 116px;
+  top: 138px;
+  transform: rotate(10deg);
+  border-radius: 15% 15% 30% 15%;
+}
+
+.drum-tom2 .drum-shine {
+  left: 18px;
+  top: 97px;
+  transform: rotate(10deg);
 }
