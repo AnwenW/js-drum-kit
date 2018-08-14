@@ -23,6 +23,28 @@ body {
   background: radial-gradient(circle, rgba(112,116,147,1) 0%, rgba(0,19,52,1) 100%);
 }
 
+.title {
+  background: rgba(255,255,255,0.6);
+  color: var(--letter);
+  text-transform: uppercase;
+  padding: 5px 10px;
+  font-size: 34px;
+  font-family: monospace;
+  position: absolute;
+}
+
+.play {
+  transform: rotate(-15deg);
+  top: 364px;
+  left: 32px;
+}
+
+.thedrums {
+  transform: rotate(-9deg);
+  top: 416px;
+  left: 30px;
+}
+
 
 /* /////// DRUM KIT //////// */
 
@@ -30,7 +52,7 @@ body {
   position: relative;
   width: 800px;
   height: 600px;
-  margin: 15vh auto;
+  margin: 13vh auto;
 }
 
 .cymbal-hihat:hover, .cymbal-openhat:hover, .drum-tom:hover, .drum-snare:hover, .cymbal-ride:hover, .drum-tom2:hover, .drum-boom:hover {
