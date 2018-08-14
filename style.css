@@ -32,7 +32,7 @@ body {
   margin: 15vh auto;
 }
 
-.cymbal-hihat:hover, .cymbal-openhat:hover, .drum-tom:hover, .drum-snare:hover, .cymbal-ride:hover, .drum-tom2:hover {
+.cymbal-hihat:hover, .cymbal-openhat:hover, .drum-tom:hover, .drum-snare:hover, .cymbal-ride:hover, .drum-tom2:hover, .drum-boom:hover {
   transform: translateY(5px);
 }
 
@@ -482,44 +482,50 @@ body {
 }
 
 .drum-boom .drum-clip1 {
-  left: 7px;
-  top: 79px;
-  transform: rotate(10deg);
+  left: 11px;
+  top: 115px;
+  transform: rotate(15deg);
+  height: 32px;
   border-radius: 0% 0% 15% 50%;
 }
 
 .drum-boom .drum-clip2 {
-  left: 64px;
-  top: 103px;
-  transform: rotate(10deg);
+  left: 75px;
+  top: 149px;
+  transform: rotate(15deg);
+  height: 32px;
   border-radius: 40% 0 15% 15%;
 }
 
 .drum-boom .drum-clip3 {
-  left: 124px;
-  top: 96px;
-  transform: rotate(10deg);
+  left: 147px;
+  top: 147px;
+  transform: rotate(15deg);
+  height: 32px;
   border-radius: 60% 0% 30% 15%;
 }
 
 .drum-boom .drum-clip4 {
-  left: -1px;
-  top: 118px;
-  transform: rotate(10deg);
+  left: -8px;
+  top: 185px;
+  transform: rotate(15deg);
+  height: 32px;
   border-radius: 35% 15% 0% 50%;
 }
 
 .drum-boom .drum-clip5 {
-  left: 57px;
-  top: 144px;
-  transform: rotate(10deg);
+  left: 56px;
+  top: 218px;
+  transform: rotate(15deg);
+  height: 32px;
   border-radius: 15%;
 }
 
 .drum-boom .drum-clip6 {
-  left: 116px;
-  top: 138px;
-  transform: rotate(10deg);
+  left: 128px;
+  top: 218px;
+  transform: rotate(15deg);
+  height: 32px;
   border-radius: 15% 15% 30% 15%;
 }
 
