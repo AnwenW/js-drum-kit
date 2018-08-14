@@ -273,6 +273,8 @@ body {
   border-radius: 25% 0 27% 17%;
 }
 
+/* ////////// DRUM TOM CLIPS //////// */
+
 .drum-tom .drum-clip1 {
   left: 24px;
   top: 98px;
@@ -403,6 +405,8 @@ body {
 
 /* ///////// DRUMS RIGHT - TOM2 AND BOOM ///////// */
 
+/* ////////// TOM2 /////////// */
+
 .drum-tom2 {
   position: absolute;
   top: 100px;
@@ -460,4 +464,100 @@ body {
   left: 18px;
   top: 97px;
   transform: rotate(10deg);
+}
+
+/* ////////////// DRUM BOOM ///////////// */
+
+.drum-boom {
+  position: absolute;
+  top: 259px;
+  left: 557px;
+  transition: transform 0.2s;
+}
+
+.drum-boom .drum-skin {
+  width: 194px;
+  height: 127px;
+  transform: rotate(15deg);
+}
+
+.drum-boom .drum-clip1 {
+  left: 7px;
+  top: 79px;
+  transform: rotate(10deg);
+  border-radius: 0% 0% 15% 50%;
+}
+
+.drum-boom .drum-clip2 {
+  left: 64px;
+  top: 103px;
+  transform: rotate(10deg);
+  border-radius: 40% 0 15% 15%;
+}
+
+.drum-boom .drum-clip3 {
+  left: 124px;
+  top: 96px;
+  transform: rotate(10deg);
+  border-radius: 60% 0% 30% 15%;
+}
+
+.drum-boom .drum-clip4 {
+  left: -1px;
+  top: 118px;
+  transform: rotate(10deg);
+  border-radius: 35% 15% 0% 50%;
+}
+
+.drum-boom .drum-clip5 {
+  left: 57px;
+  top: 144px;
+  transform: rotate(10deg);
+  border-radius: 15%;
+}
+
+.drum-boom .drum-clip6 {
+  left: 116px;
+  top: 138px;
+  transform: rotate(10deg);
+  border-radius: 15% 15% 30% 15%;
+}
+
+.drum-boom .drum-skin {
+  left: 18px;
+  top: 97px;
+  border: 5px solid var(--drumborder);
+  transform: rotate(15deg);
+  box-shadow: 0px 7px 0px var(--drumborder),
+              0px 14px 0px var(--drumborderdark),
+              0px 21px 0px var(--drumborder),
+              0px 28px 0px var(--drumbody),
+              0px 35px 0px var(--drumbody),
+              0px 42px 0px var(--drumbody),
+              0px 49px 0px var(--drumbody),
+              0px 56px 0px var(--drumbody),
+              0px 63px 0px var(--drumbody),
+              0px 66px 0px var(--drumhighlight3),
+              0px 69px 0px var(--drumhighlight2),
+              0px 72px 0px var(--drumhighlight1),
+              0px 75px 0px var(--drumhighlight2),
+              0px 78px 0px var(--drumhighlight3),
+              0px 85px 0px var(--drumbody),
+              0px 94px 0px var(--drumbody),
+              0px 101px 0px var(--drumbody),
+              0px 108px 0px var(--drumbody),
+              0px 115px 0px var(--drumbody),
+              2px 121px 5px rgba(0,0,0,0.4);
+}
+
+.drum-boom .drum-shine {
+  width: 30px;
+  height: 90px;
+  border-radius: 25%;
+  background: rgba(255,255,255,0.5);
+  position: absolute;
+  left: 9px;
+  top: 129px;
+  filter: blur(8px);
+  transform: rotate(15deg);
 }
