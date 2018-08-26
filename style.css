@@ -156,7 +156,8 @@ body {
   top: 57px;
   left: 5px;
   border-radius: 8px;
-  box-shadow: 0px -2px 4px 0px var(--cymbalshinelight), -2px 2px 4px 0px var(--cymbalshinelight);
+  /* box-shadow: 0px -2px 4px 0px var(--cymbalshinelight), -2px 2px 4px 0px var(--cymbalshinelight); */
+  filter: blur(4px);
   opacity: 0.6;
 }
 
@@ -170,7 +171,8 @@ body {
   left: 18px;
   border-top-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  box-shadow: 0px -2px 4px 0px var(--cymbalshinedark), -2px 2px 4px 0px var(--cymbalshinedark);
+  /* box-shadow: 0px -2px 4px 0px var(--cymbalshinedark), -2px 2px 4px 0px var(--cymbalshinedark); */
+  filter: blur(4px);
   opacity: 0.5;
 }
 
@@ -580,13 +582,25 @@ body {
 }
 
 .drum-boom .drum-shine {
-  width: 30px;
+  width: 48px;
   height: 90px;
-  border-radius: 25%;
-  background: rgba(255,255,255,0.5);
+  border-radius: 40%;
+  background: rgba(255,255,255,0.6);
   position: absolute;
-  left: 9px;
-  top: 129px;
+  left: 5px;
+  top: 128px;
+  filter: blur(10px);
+  transform: rotate(15deg);
+}
+
+.drum-boom .drum-shine-dark {
+  width: 25px;
+  height: 90px;
+  border-radius: 10%;
+  background: rgba(0,0,0,0.3);
+  position: absolute;
+  left: 150px;
+  top: 145px;
   filter: blur(8px);
   transform: rotate(15deg);
 }
