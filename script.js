@@ -9,6 +9,7 @@ function playSound(e) {
 }
 
 function removeTransition(e) {
+  // console.log(e);
   if(e.propertyName !== 'transform') return; // skip it if not a transform
 
   // console.log(this); // cheap and dirty way to find out what 'this' is!! Here, it's the key
