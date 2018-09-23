@@ -1,0 +1,582 @@
+/* ///////  BACKGROUND + FLOORBOARDS ///////// */
+body {
+  background-color: #9b600b;
+  /* fallback */
+  background: radial-gradient(ellipse, rgba(240, 192, 96, 1) 0%, rgba(186, 118, 0, 1) 30%, rgba(19, 19, 19, 1) 71%, rgba(19, 19, 19, 1) 100%);
+  /* fallback */
+  background: radial-gradient(ellipse, rgba(240, 192, 96, 0.6) 0%, rgba(186, 118, 0, 0.6) 30%, rgba(19, 19, 19, 0.8) 71%, rgba(19, 19, 19, 0.8) 100%), url("images/woodgrain-tile-dark-200.png") repeat;
+  background-attachment: fixed;
+}
+svg {
+  position: absolute;
+  top: -100px;
+  left: -200px;
+  width: 1200px;
+}
+.floor-line {
+  fill: rgba(10, 10, 10, 0.2);
+}
+/* ///////  TITLE + LETTERS ///////// */
+.title {
+  background: rgba(255, 255, 255, 0.6);
+  color: #1c242d;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  font-size: 34px;
+  font-family: monospace;
+  position: absolute;
+}
+.play {
+  transform: rotate(-15deg);
+  top: 364px;
+  left: 32px;
+}
+.thedrums {
+  transform: rotate(-9deg);
+  top: 416px;
+  left: 30px;
+}
+.letter-hihat, .letter-openhat, .letter-snare, .letter-tom, .letter-tom2, .letter-kick, .letter-ride, .letter-boom {
+  /* extend/inheritance */
+  width: 54px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.6);
+  color: #1c242d;
+  border: 2.5px solid #1c242d;
+  border-radius: 15px;
+  font-size: 49px;
+  font-family: monospace;
+  text-align: center;
+  position: absolute;
+}
+.letter-hihat {
+  top: 92px;
+  left: 81px;
+}
+.letter-openhat {
+  top: -20px;
+  left: 187px;
+}
+.letter-snare {
+  top: 205px;
+  left: 201px;
+}
+.letter-tom {
+  top: 83px;
+  left: 305px;
+}
+.letter-tom2 {
+  top: 93px;
+  left: 493px;
+}
+.letter-kick {
+  top: 289px;
+  left: 404px;
+}
+.letter-ride {
+  top: -20px;
+  left: 596px;
+}
+.letter-boom {
+  top: 247px;
+  left: 629px;
+}
+/* ////////  DRUM KIT  /////// */
+.drumkit {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  margin: 13vh auto;
+}
+/* /////// LEFT CYMBAL x2 - HIHAT - OPENHAT /////// */
+.cymbal-hihat {
+  position: absolute;
+  transition: transform 0.2s;
+  top: 108px;
+  left: 20px;
+}
+.cymbal-hihat:hover {
+  transform: translateY(5px);
+}
+.cymbal-openhat {
+  position: absolute;
+  transition: transform 0.2s;
+  top: 0px;
+  left: 125px;
+}
+.cymbal-openhat:hover {
+  transform: translateY(5px);
+}
+.cymbal-center {
+  transform: rotate(-10deg);
+  background: #605040;
+  border-radius: 50%;
+  width: 15px;
+  height: 12px;
+  position: absolute;
+  left: 84px;
+  top: 52px;
+}
+.cymbal-shine-light {
+  transform: rotate(15deg);
+  background: #ffe8cc;
+  width: 171px;
+  height: 23px;
+  position: absolute;
+  top: 49px;
+  left: 13px;
+  border-top-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+  opacity: 0.6;
+  filter: blur(3px);
+}
+.cymbal-shine-dark {
+  transform: rotate(45deg);
+  background: #846e5b;
+  width: 144px;
+  height: 13px;
+  position: absolute;
+  top: 58px;
+  left: 26px;
+  border-top-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+  opacity: 0.5;
+  filter: blur(3px);
+}
+.cymbal-shape {
+  transform: rotate(-10deg);
+  background: #f9ae64;
+  border-radius: 50%;
+  width: 190px;
+  height: 129px;
+  box-shadow: inset 0px 0px 0px 21px #db995c, 2px 8px 5px rgba(0, 0, 0, 0.4);
+}
+/* ////// RIGHT CYMBAL - RIDE /////// */
+.cymbal-ride {
+  position: absolute;
+  transition: transform 0.2s;
+  top: 3px;
+  left: 520px;
+}
+.cymbal-ride:hover {
+  transform: translateY(5px);
+}
+.cymbal-ride-center {
+  transform: rotate(10deg);
+  background: #605040;
+  border-radius: 50%;
+  width: 17px;
+  height: 14px;
+  position: absolute;
+  left: 96px;
+  top: 61px;
+}
+.cymbal-ride-light {
+  transform: rotate(15deg);
+  background: #ffe8cc;
+  width: 205px;
+  height: 23px;
+  position: absolute;
+  top: 57px;
+  left: 4px;
+  border-radius: 11px;
+  filter: blur(3px);
+  opacity: 0.6;
+}
+.cymbal-ride-dark {
+  transform: rotate(45deg);
+  background: #846e5b;
+  width: 178px;
+  height: 13px;
+  position: absolute;
+  top: 65px;
+  left: 20px;
+  border-radius: 12px;
+  filter: blur(3px);
+  opacity: 0.5;
+}
+.cymbal-ride-shape {
+  transform: rotate(10deg);
+  background: #f9ae64;
+  border-radius: 50%;
+  width: 210px;
+  height: 145px;
+}
+.cymbal-ride-shape {
+  box-shadow: inset 0px 0px 0px 24px #db995c, 2px 8px 5px rgba(0, 0, 0, 0.4);
+}
+/*///// DRUMS //////*/
+.drum-tom .drum-skin, .drum-snare .drum-skin, .drum-tom2 .drum-skin {
+  /* extend/inheritance */
+  background: #fff8ed;
+  border-radius: 50%;
+  border: 3px solid #bcbcbc;
+  box-shadow: 0px 3px 0px #bcbcbc, 0px 8px 0px #545454, 0px 14px 0px #bcbcbc, 0px 18px 0px #4488ed, 0px 24px 0px #4488ed, 0px 30px 0px #4488ed, 0px 33px 0px #4488ed, 0px 36px 0px #488ff2, 0px 39px 0px #5498f7, 0px 42px 0px #60a1f7, 0px 45px 0px #5498f7, 0px 48px 0px #488ff2, 0px 54px 0px #4488ed, 0px 60px 0px #4488ed, 0px 66px 0px #4488ed, 0px 72px 0px #4488ed, 2px 78px 5px rgba(0, 0, 0, 0.4);
+}
+.drum-tom .drum-shine, .drum-snare .drum-shine, .drum-tom2 .drum-shine {
+  width: 29px;
+  height: 55px;
+  border-radius: 40%;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  filter: blur(7px);
+}
+.drum-tom .drum-clip1, .drum-tom .drum-clip2, .drum-tom .drum-clip3, .drum-tom .drum-clip4, .drum-tom .drum-clip5, .drum-tom .drum-clip6, .drum-snare .drum-clip1, .drum-snare .drum-clip2, .drum-snare .drum-clip3, .drum-snare .drum-clip4, .drum-snare .drum-clip5, .drum-snare .drum-clip6, .drum-tom2 .drum-clip1, .drum-tom2 .drum-clip2, .drum-tom2 .drum-clip3, .drum-tom2 .drum-clip4, .drum-tom2 .drum-clip5, .drum-tom2 .drum-clip6, .drum-boom .drum-clip1, .drum-boom .drum-clip2, .drum-boom .drum-clip3, .drum-boom .drum-clip4, .drum-boom .drum-clip5, .drum-boom .drum-clip6 {
+  background: #bcbcbc;
+  width: 7px;
+  height: 25px;
+  border-right: 1.5px solid #545454;
+  position: absolute;
+}
+/* ////// LEFT DRUM - TOM /////// */
+.drum-tom {
+  position: absolute;
+  transition: transform 0.2s;
+  top: 101px;
+  left: 256px;
+}
+.drum-tom:hover {
+  transform: translateY(5px);
+}
+.drum-tom .drum-skin {
+  transform: rotate(-10deg);
+  width: 150px;
+  height: 90px;
+}
+.drum-tom .drum-shine {
+  transform: rotate(-10deg);
+  left: 46px;
+  top: 107px;
+}
+.drum-tom .drum-clip1 {
+  transform: rotate(-9deg) skewY(35deg);
+  left: 26px;
+  top: 98px;
+}
+.drum-tom .drum-clip2 {
+  transform: rotate(-10deg);
+  left: 86px;
+  top: 103px;
+}
+.drum-tom .drum-clip3 {
+  transform: rotate(-11deg) skewY(-32deg);
+  left: 141px;
+  top: 79px;
+}
+.drum-tom .drum-clip4 {
+  transform: rotate(-9deg) skewY(35deg);
+  left: 32px;
+  top: 139px;
+}
+.drum-tom .drum-clip5 {
+  transform: rotate(-10deg);
+  left: 94px;
+  top: 144px;
+}
+.drum-tom .drum-clip6 {
+  transform: rotate(-11deg) skewY(-32deg);
+  left: 149px;
+  top: 118px;
+}
+/* ////// LEFT DRUM - SNARE /////// */
+.drum-snare {
+  position: absolute;
+  transition: transform 0.2s;
+  top: 225px;
+  left: 145px;
+}
+.drum-snare:hover {
+  transform: translateY(5px);
+}
+.drum-snare .drum-skin {
+  transform: rotate(-10deg);
+  width: 170px;
+  height: 100px;
+  border: 4px solid #bcbcbc;
+}
+.drum-snare .drum-shine {
+  transform: rotate(-10deg);
+  left: 45px;
+  top: 118px;
+}
+.drum-snare .drum-clip1 {
+  transform: rotate(-9deg) skewY(35deg);
+  left: 28px;
+  top: 109px;
+}
+.drum-snare .drum-clip2 {
+  transform: rotate(-10deg);
+  left: 95px;
+  top: 116px;
+}
+.drum-snare .drum-clip3 {
+  transform: rotate(-11deg) skewY(-32deg);
+  left: 159px;
+  top: 88px;
+}
+.drum-snare .drum-clip4 {
+  transform: rotate(-9deg) skewY(35deg);
+  left: 34px;
+  top: 149px;
+}
+.drum-snare .drum-clip5 {
+  transform: rotate(-10deg);
+  left: 102px;
+  top: 157px;
+}
+.drum-snare .drum-clip6 {
+  transform: rotate(-11deg) skewY(-32deg);
+  left: 167px;
+  top: 127px;
+}
+/* //////// CENTRE DRUM - KICK  /////// */
+.drum-kick {
+  position: absolute;
+  transition: transform 0.2s;
+  transition-delay: 0.1s;
+  top: 336px;
+  left: 303px;
+}
+.drum-kick:hover {
+  transform: translateY(-5px);
+}
+.drum-kick:hover ~ .drum-pedal {
+  left: 396px;
+  transform: rotate(-87deg) skewY(11deg);
+}
+.drum-kick:hover ~ .drum-beater {
+  left: 429px;
+  top: 380px;
+  transform: rotate(-7deg);
+}
+.drum-kick-skin {
+  transform: rotate(184deg);
+  background: #fff8ed;
+  border-radius: 50%;
+  width: 250px;
+  height: 107px;
+  border: 3px solid #bcbcbc;
+  box-shadow: 0px 7px 0px #bcbcbc, 0px 14px 0px #545454, 0px 21px 0px #bcbcbc, 0px 28px 0px #cc3f3f, 0px 35px 0px #cc3f3f, 0px 42px 0px #cc4f4f, 0px 49px 0px #d36b6b, 0px 56px 0px #d87979, 0px 63px 0px #d36b6b, 0px 70px 0px #cc4f4f, 0px 77px 0px #cc3f3f, 0px 84px 0px #cc3f3f, 0px 91px 0px #cc3f3f, 0px 98px 0px #cc3f3f, 0px 105px 0px #cc3f3f, 0px 112px 0px #cc3f3f, -3px -6px 10px rgba(0, 0, 0, 0.4);
+}
+/* //// DRUM PEDAL  //// */
+.drum-pedal {
+  background: #bcbcbc;
+  position: absolute;
+  top: 471px;
+  left: 394px;
+  width: 61px;
+  height: 25px;
+  border-radius: 4px;
+  transform: rotate(-87deg) skewY(7deg);
+  box-shadow: inset -2px 2px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.drum-pedal-edge {
+  position: absolute;
+  top: 471px;
+  left: 400px;
+  background: #444;
+  width: 59px;
+  height: 25px;
+  border-radius: 4px;
+  transform: rotate(91deg) skewY(17deg);
+  box-shadow: 6px -5px 10px rgba(0, 0, 0, 0.4);
+}
+.drum-pedal-back {
+  position: absolute;
+  top: 421px;
+  left: 412px;
+  border-color: #444;
+  border-style: solid;
+  border-width: 4px 3px 15px 3px;
+  border-radius: 5%;
+  width: 40px;
+  height: 15px;
+  box-shadow: inset 3px 3px 1px -2px rgba(0, 0, 0, 0.5), 3px 1px 4px -2px rgba(0, 0, 0, 0.5);
+}
+.drum-beater {
+  position: absolute;
+  top: 388px;
+  left: 413px;
+  transform: rotate(-53deg);
+}
+.beater-stick {
+  height: 48px;
+  width: 6px;
+  background: #444;
+  border-radius: 3px;
+}
+.beater-head {
+  position: absolute;
+  top: -13px;
+  left: -7px;
+  height: 20px;
+  width: 20px;
+  border-radius: 35%;
+  background: #444;
+  box-shadow: inset -1px 4px 4px -1px rgba(255, 255, 255, 0.6);
+}
+/* ////// */
+.drum-kick-clip1, .drum-kick-clip2, .drum-kick-clip3, .drum-kick-clip4, .drum-kick-clip5, .drum-kick-clip6 {
+  background: #bcbcbc;
+  width: 9px;
+  height: 34px;
+  border-right: 1.5px solid #545454;
+  position: absolute;
+}
+.drum-kick-clip1 {
+  left: 62px;
+  top: -110px;
+  transform: rotate(-11deg) skew(-15deg);
+}
+.drum-kick-clip2 {
+  left: 152px;
+  top: -112px;
+  transform: rotate(8deg) skew(5deg);
+}
+.drum-kick-clip3 {
+  left: 228px;
+  top: -89px;
+  transform: rotate(1deg) skewY(28deg);
+}
+.drum-kick-clip4 {
+  left: 58px;
+  top: -45px;
+  transform: rotate(-11deg) skew(-15deg);
+}
+.drum-kick-clip5 {
+  left: 149px;
+  top: -46px;
+  transform: rotate(8deg) skew(5deg);
+}
+.drum-kick-clip6 {
+  left: 226px;
+  top: -21px;
+  transform: rotate(1deg) skewY(28deg);
+}
+.drum-kick-shine {
+  transform: rotate(10deg);
+  width: 51px;
+  height: 71px;
+  border-radius: 39%;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  left: 85px;
+  top: -86px;
+  filter: blur(10px);
+}
+/* /////  RIGHT DRUM - TOM2  /////// */
+.drum-tom2 {
+  position: absolute;
+  transition: transform 0.2s;
+  top: 100px;
+  left: 445px;
+}
+.drum-tom2:hover {
+  transform: translateY(5px);
+}
+.drum-tom2 .drum-skin {
+  transform: rotate(10deg);
+  width: 150px;
+  height: 90px;
+}
+.drum-tom2 .drum-shine {
+  transform: rotate(10deg);
+  left: 14px;
+  top: 97px;
+}
+.drum-tom2 .drum-clip1 {
+  transform: rotate(11deg) skewY(41deg);
+  left: 7px;
+  top: 78px;
+}
+.drum-tom2 .drum-clip2 {
+  transform: rotate(11deg);
+  left: 64px;
+  top: 104px;
+}
+.drum-tom2 .drum-clip3 {
+  transform: rotate(10deg) skewY(-38deg);
+  left: 124px;
+  top: 97px;
+}
+.drum-tom2 .drum-clip4 {
+  transform: rotate(11deg) skewY(41deg);
+  left: -1px;
+  top: 117px;
+}
+.drum-tom2 .drum-clip5 {
+  transform: rotate(11deg);
+  left: 56px;
+  top: 144px;
+}
+.drum-tom2 .drum-clip6 {
+  transform: rotate(10deg) skewY(-38deg);
+  left: 118px;
+  top: 137px;
+}
+/* /////  RIGHT DRUM - BOOM  /////// */
+.drum-boom {
+  position: absolute;
+  transition: transform 0.2s;
+  top: 259px;
+  left: 557px;
+}
+.drum-boom:hover {
+  transform: translateY(5px);
+}
+.drum-boom .drum-skin {
+  transform: rotate(15deg);
+  background: #fff8ed;
+  border-radius: 50%;
+  width: 194px;
+  height: 127px;
+  border: 5px solid #bcbcbc;
+  box-shadow: 0px 7px 0px #bcbcbc, 0px 14px 0px #545454, 0px 21px 0px #bcbcbc, 0px 28px 0px #4488ed, 0px 35px 0px #4488ed, 0px 42px 0px #4488ed, 0px 49px 0px #4488ed, 0px 56px 0px #4488ed, 0px 63px 0px #4488ed, 0px 66px 0px #488ff2, 0px 69px 0px #5498f7, 0px 72px 0px #60a1f7, 0px 75px 0px #5498f7, 0px 78px 0px #488ff2, 0px 85px 0px #4488ed, 0px 94px 0px #4488ed, 0px 101px 0px #4488ed, 0px 108px 0px #4488ed, 0px 115px 0px #4488ed, 2px 121px 5px rgba(0, 0, 0, 0.4);
+}
+.drum-boom .drum-shine {
+  transform: rotate(15deg);
+  width: 48px;
+  height: 83px;
+  border-radius: 40%;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  left: 5px;
+  top: 135px;
+  filter: blur(10px);
+}
+.drum-boom .drum-clip1 {
+  left: 11px;
+  top: 114px;
+  height: 32px;
+  transform: rotate(15deg) skewY(30deg);
+}
+.drum-boom .drum-clip2 {
+  transform: rotate(15deg);
+  left: 75px;
+  top: 149px;
+  height: 32px;
+}
+.drum-boom .drum-clip3 {
+  left: 148px;
+  top: 148px;
+  height: 32px;
+  transform: skew(-28deg) rotate(-15deg);
+}
+.drum-boom .drum-clip4 {
+  left: -8px;
+  top: 185px;
+  height: 32px;
+  transform: rotate(15deg) skewY(30deg);
+}
+.drum-boom .drum-clip5 {
+  transform: rotate(15deg);
+  left: 56px;
+  top: 218px;
+  height: 32px;
+}
+.drum-boom .drum-clip6 {
+  left: 131px;
+  top: 216px;
+  height: 32px;
+  transform: skew(-28deg) rotate(-15deg);
+}
