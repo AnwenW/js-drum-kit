@@ -23,7 +23,7 @@ $background: #9b600b;
 body {
   background-color: $background; /* fallback */
   background: radial-gradient(ellipse, rgba(240,192,96,1) 0%, rgba(186,118,0,1) 30%, rgba(19,19,19,1) 71%, rgba(19,19,19,1) 100%); /* fallback */
-  background: radial-gradient(ellipse, rgba(240,192,96,0.6) 0%, rgba(186,118,0,0.6) 30%, rgba(19,19,19,0.8) 71%, rgba(19,19,19,0.8) 100%), url("images/woodgrain-tile-dark-200.png") repeat;
+  background: radial-gradient(ellipse, rgba(240,192,96,0.6) 0%, rgba(186,118,0,0.6) 30%, rgba(19,19,19,0.8) 71%, rgba(19,19,19,0.8) 100%), url("https://github.com/AnwenW/js-drum-kit/blob/master/images/woodgrain-tile-dark-200.png?raw=true") repeat;
   background-attachment: fixed;
 }
 
@@ -458,7 +458,7 @@ svg {
     left: 429px;
     top: 380px;
     transform: rotate(-7deg);
-  }  
+  }
 }
 
 .drum-kick-skin {
