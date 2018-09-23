@@ -1,16 +1,36 @@
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
 
     <meta charset="UTF-8">
     <title>JS Drum Kit</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-compiled.css">
 
   </head>
 
   <body>
 
     <div class="drumkit">
+
+      <svg viewBox="0 0 250 250">
+        <!-- vertical lines LTR -->
+        <path class="floor-line" d=" M 37,0 L -10,200 l 2,0 l 46 -200 Z   "></path>
+        <path class="floor-line" d=" M 60,0 L 20,200 l 2,0 l 39 -200 Z   "></path>
+        <path class="floor-line" d=" M 83,0 L 50,200 l 2,0 l 32 -200 Z   "></path>
+        <path class="floor-line" d=" M 105,0 L 80,200 l 2,0 l 24 -200 Z   "></path>
+        <path class="floor-line" d=" M 126,0 L 110,200 l 2,0 l 15 -200 Z   "></path>
+        <path class="floor-line" d=" M 146,0 L 140,200 l 2,0 l 5 -200 Z   "></path>
+        <path class="floor-line" d=" M 165,0 L 170,200 l 2,0 l -6 -200 Z   "></path>
+        <path class="floor-line" d=" M 185,0 L 200,200 l 2,0 l -16 -200 Z   "></path>
+        <path class="floor-line" d=" M 205,0 L 230,200 l 2,0 l -26 -200 Z   "></path>
+        <path class="floor-line" d=" M 225,0 L 260,200 l 2,0 l -36 -200 Z   "></path>
+        <!-- horizontal lines LTR -->
+        <path class="floor-line" d=" M 33,20 L 56,20 l 0,1 l -23 0 Z   "></path>
+        <path class="floor-line" d=" M 65.5,115 L 90.6,115 l 0,1.3 l -25.1 0 Z   "></path>
+        <path class="floor-line" d=" M 103.5,16 L 125,16 l 0,1 l -21.5 0 Z   "></path>
+        <path class="floor-line" d=" M 192,75 L 214.5,75 l 0,1.2 l -22.5 0 Z   "></path>
+      </svg>
 
       <div class="drum-kick">
         <div class="drum-kick-skin"></div>
@@ -22,6 +42,15 @@
         <div class="drum-kick-clip6"></div>
         <div class="drum-kick-shine"></div>
       </div> <!-- closes drum-kick -->
+
+      <div class="drum-beater">
+        <div class="beater-stick"></div>
+        <div class="beater-head"></div>
+      </div>
+
+      <div class="drum-pedal-back"></div>
+      <div class="drum-pedal-edge"></div>
+      <div class="drum-pedal"></div>
 
       <div class="drum-tom">
         <div class="drum-skin"></div>
@@ -65,7 +94,6 @@
         <div class="drum-clip5"></div>
         <div class="drum-clip6"></div>
         <div class="drum-shine"></div>
-        <div class="drum-shine-dark"></div>
       </div> <!-- closes drum-boom -->
 
       <div class="cymbal-hihat">
@@ -89,6 +117,7 @@
         <div class="cymbal-ride-center"></div>
       </div> <!-- closes cymbal-ride -->
 
+      <!-- letter divs for css -->
       <div class="letter letter-kick">D</div>
       <div class="letter letter-tom">K</div>
       <div class="letter letter-snare">J</div>
@@ -97,6 +126,16 @@
       <div class="letter letter-hihat">S</div>
       <div class="letter letter-openhat">F</div>
       <div class="letter letter-ride">H</div>
+
+      <!-- letter- divs for scss -->
+      <!-- <div class="letter-kick">D</div>
+      <div class="letter-tom">K</div>
+      <div class="letter-snare">J</div>
+      <div class="letter-tom2">A</div>
+      <div class="letter-boom">G</div>
+      <div class="letter-hihat">S</div>
+      <div class="letter-openhat">F</div>
+      <div class="letter-ride">H</div> -->
 
       <!-- <p class="title play">Play</p>
       <p class="title thedrums">the drums!</p> -->
