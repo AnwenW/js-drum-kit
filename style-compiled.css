@@ -26,7 +26,7 @@ svg {
   font-family: monospace;
   position: absolute;
 }
-.play {
+/* .play {
   transform: rotate(-15deg);
   top: 364px;
   left: 32px;
@@ -35,7 +35,7 @@ svg {
   transform: rotate(-9deg);
   top: 416px;
   left: 30px;
-}
+} */
 .letter-hihat, .letter-openhat, .letter-snare, .letter-tom, .letter-tom2, .letter-kick, .letter-ride, .letter-boom {
   /* extend/inheritance */
   width: 54px;
@@ -48,7 +48,7 @@ svg {
   /* font-family: monospace; */
   text-align: center;
   position: absolute;
-  transition: all .07s ease; /* required for JS removeTransition */
+  transition: all .05s ease; /* required for JS removeTransition */
 }
 .letter-hihat {
   top: 92px;
@@ -333,15 +333,17 @@ svg {
 /* //////// CENTRE DRUM - KICK  /////// */
 .drum-kick {
   position: absolute;
-  transition: transform 0.2s;
-  transition-delay: 0.1s;
+  /* transition: transform 0.2s; */
+  /* animation-delay: 0.15s; */
   top: 336px;
   left: 303px;
 }
-.drum-kick:hover {
+/* .drum-kick:hover {
   transform: translateY(-5px);
-}
-.drum-kick:hover ~ .drum-pedal {
+} */
+
+
+/* .drum-kick:hover ~ .drum-pedal {
   left: 396px;
   transform: rotate(-87deg) skewY(11deg);
 }
@@ -349,7 +351,7 @@ svg {
   left: 429px;
   top: 380px;
   transform: rotate(-7deg);
-}
+} */
 .drum-kick-skin {
   transform: rotate(184deg);
   background: #fff8ed;
@@ -582,9 +584,71 @@ svg {
   transform: skew(-28deg) rotate(-15deg);
 }
 
+
+
+
+
 /* add class on keydown */
 .playing {
   transform: scale(1.1);
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
+}
+
+
+@keyframes transformUp {
+  0%   {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.moveUp {
+  animation: transformUp 0.15s;
+  animation-delay: 0.1s;
+}
+
+@keyframes transformDown {
+  0%   {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.moveDown {
+  animation: transformDown 0.2s;
+}
+
+@keyframes transformPedal {
+  0% {
+    left: 394px;
+    transform: rotate(-87deg) skewY(7deg);
+  }
+  100% {
+    left: 396px;
+    transform: rotate(-87deg) skewY(11deg);
+  }
+}
+.pedalDown {
+  animation: transformPedal 0.15s;
+}
+
+@keyframes transformBeater {
+  0% {
+    left: 413px;
+    top: 388px;
+    transform: rotate(-53deg);
+  }
+  100% {
+    left: 429px;
+    top: 380px;
+    transform: rotate(-7deg);
+  }
+}
+.beaterHit {
+  animation: transformBeater 0.15s;
 }
