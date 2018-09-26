@@ -28,72 +28,111 @@ window.addEventListener('keydown', playSound);
 
 
 
-// Separate action on keydown for specified letters. Now I need to get translate transition working for G and another for other letters!
-
-const drumkick = document.querySelector('.drum-kick');
-const drumbeater = document.querySelector('.drum-beater');
-const drumpedal = document.querySelector('.drum-pedal');
-
-const drumtom = document.querySelector('.drum-tom');
-const drumsnare = document.querySelector('.drum-snare');
-const drumtom2 = document.querySelector('.drum-tom2');
-const drumboom = document.querySelector('.drum-boom');
-const cymbalhihat = document.querySelector('.cymbal-hihat');
-const cymbalopenhat = document.querySelector('.cymbal-openhat');
-const cymbalride = document.querySelector('.cymbal-ride');
-
-
 window.addEventListener('keydown', function drumTranslate(e) {
+
+  const drumkick = document.querySelector('.drum-kick');
+  const drumbeater = document.querySelector('.drum-beater');
+  const drumpedal = document.querySelector('.drum-pedal');
+
+  const drumtom = document.querySelector('.drum-tom');
+  const drumsnare = document.querySelector('.drum-snare');
+  const drumtom2 = document.querySelector('.drum-tom2');
+  const drumboom = document.querySelector('.drum-boom');
+  const cymbalhihat = document.querySelector('.cymbal-hihat');
+  const cymbalopenhat = document.querySelector('.cymbal-openhat');
+  const cymbalride = document.querySelector('.cymbal-ride');
 
    // Key G = kick drum, pedal & beater
    if (e.keyCode == 71) {
 
-       // console.log("You pressed 'G'.");
+     // console.log("You pressed 'G'.");
 
-       drumkick.classList.add('moveUp');
-       drumkick.addEventListener('animationend', function() {
-         drumkick.classList.remove('moveUp');
-       })
-       drumpedal.classList.add('pedalDown');
-       drumpedal.addEventListener('animationend', function() {
-         drumpedal.classList.remove('pedalDown');
-       })
-       drumbeater.classList.add('beaterHit');
-       drumbeater.addEventListener('animationend', function() {
-         drumbeater.classList.remove('beaterHit');
-       })
+     drumkick.classList.add('moveUp');
+     drumkick.addEventListener('animationend', function() {
+       drumkick.classList.remove('moveUp');
+     })
+     drumpedal.classList.add('pedalDown');
+     drumpedal.addEventListener('animationend', function() {
+       drumpedal.classList.remove('pedalDown');
+     })
+     drumbeater.classList.add('beaterHit');
+     drumbeater.addEventListener('animationend', function() {
+       drumbeater.classList.remove('beaterHit');
+     })
 
    } else if (e.keyCode == 65) {
-       console.log("You pressed A"); // hihat
+
+       // console.log("You pressed A"); // hihat
+
+       cymbalhihat.classList.add('moveDown');
+       cymbalhihat.addEventListener('animationend', function() {
+         cymbalhihat.classList.remove('moveDown');
+       })
+
+     } else if (e.keyCode == 83) {
+
+         // console.log("You pressed S"); // openhat
+
+         cymbalopenhat.classList.add('moveDown');
+         cymbalopenhat.addEventListener('animationend', function() {
+           cymbalopenhat.classList.remove('moveDown');
+         })
+
+       } else if (e.keyCode == 68) {
+
+           // console.log("You pressed D"); // snare
+
+           drumsnare.classList.add('moveDown');
+           drumsnare.addEventListener('animationend', function() {
+             drumsnare.classList.remove('moveDown');
+           })
 
 
-   } else if (e.keyCode == 83) {
-       console.log("You pressed S"); // openhat
+         } else if (e.keyCode == 70) {
+
+             // console.log("You pressed F"); // tom
+
+             drumtom.classList.add('moveDown');
+             drumtom.addEventListener('animationend', function() {
+               drumtom.classList.remove('moveDown');
+             })
 
 
-   } else if (e.keyCode == 68) {
-       console.log("You pressed D"); // snare
+           } else if (e.keyCode == 72) {
+
+               // console.log("You pressed H"); // tom2
+
+               drumtom2.classList.add('moveDown');
+               drumtom2.addEventListener('animationend', function() {
+                 drumtom2.classList.remove('moveDown');
+               })
 
 
-   } else if (e.keyCode == 70) {
-       console.log("You pressed F"); // tom
+             } else if (e.keyCode == 74) {
+
+                 // console.log("You pressed J"); // ride
+
+                 cymbalride.classList.add('moveDown');
+                 cymbalride.addEventListener('animationend', function() {
+                   cymbalride.classList.remove('moveDown');
+                 })
 
 
-   } else if (e.keyCode == 72) {
-       console.log("You pressed H"); // tom2
+               } else if (e.keyCode == 75) {
+
+                   // console.log("You pressed K"); //boom
+
+                   drumboom.classList.add('moveDown');
+                   drumboom.addEventListener('animationend', function() {
+                     drumboom.classList.remove('moveDown');
+                   })
+
+                 } // closes final else if
+
+}) // closes window.eventListener / function drumTranslate
 
 
-   } else if (e.keyCode == 74) {
-       console.log("You pressed J"); // ride
 
-
-   } else if (e.keyCode == 75) {
-       console.log("You pressed K"); //boom
-
-
-   } // closes else
-
-}) // closes window.eventListener + function drumTranslate
 
 
 // Is there a way to combine all this into a shorter/ neater function??
@@ -102,6 +141,15 @@ window.addEventListener('keydown', function drumTranslate(e) {
 
 
 // Do I need to write a single function that calls the two keydown functions at the same time? ie:
+
+// function combineFunctions(e) {
+//   playSound(e);
+//   drumTranslate(e);
+// };
+//
+// window.addEventListener('keydown', combineFunctions);
+
+
 
 // function drumTranslate(e) {
 //    if (e.keyCode == 71) {
@@ -112,10 +160,3 @@ window.addEventListener('keydown', function drumTranslate(e) {
 //      }
 //    };
 // }
-//
-// function combineFunctions(e) {
-//   playSound(e);
-//   drumTranslate(e);
-// };
-//
-// window.addEventListener('keydown', combineFunctions);
