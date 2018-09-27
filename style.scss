@@ -17,6 +17,7 @@ $kickhighlight3: #cc4f4f;
 $pedaldark: #444444;
 $letter: #1c242d;
 $background: #9b600b;
+$keydown: #ffc600;
 
 /* ///////  BACKGROUND + FLOORBOARDS ///////// */
 
@@ -50,17 +51,17 @@ svg {
   position: absolute;
 }
 
-.text-play {
-  transform: rotate(-15deg);
-  top: 364px;
-  left: 32px;
-}
-
-.text-thedrums {
-  transform: rotate(-9deg);
-  top: 416px;
-  left: 30px;
-}
+// .text-play {
+//   transform: rotate(-15deg);
+//   top: 364px;
+//   left: 32px;
+// }
+//
+// .text-thedrums {
+//   transform: rotate(-9deg);
+//   top: 416px;
+//   left: 30px;
+// }
 
 %letter { /* extend/inheritance */
   width: 54px;
@@ -124,6 +125,13 @@ svg {
   left: 629px;
 }
 
+/*///  JS keydown – add class  ///*/
+
+.playing {
+  transform: scale(1.1);
+  border-color: $keydown;
+  box-shadow: 0 0 1rem $keydown;
+}
 
 /* ////////  DRUM KIT  /////// */
 
@@ -320,6 +328,21 @@ svg {
   position: absolute;
 }
 
+/*//  JS keydown – drums (not kick drum) - move down  //*/
+
+@keyframes transformDown {
+  0%   {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.moveDown {
+  animation: transformDown 0.15s;
+}
+
 /* ////// LEFT DRUM - TOM /////// */
 
 .drum-tom {
@@ -489,67 +512,6 @@ svg {
               -3px -6px 10px rgba(0,0,0,0.4);
 }
 
-/* //// DRUM PEDAL  //// */
-
-.drum-pedal {
-  background: $drumborder;
-  position: absolute;
-  top: 471px;
-  left: 394px;
-  width: 61px;
-  height: 25px;
-  border-radius: 4px;
-  transform: rotate(-87deg) skewY(7deg);
-  box-shadow: inset -2px 2px 1px 1px rgba(255,255,255,0.5);
-}
-.drum-pedal-edge {
-  position: absolute;
-  top: 471px;
-  left: 400px;
-  background: $pedaldark;
-  width: 59px;
-  height: 25px;
-  border-radius: 4px;
-  transform: rotate(91deg) skewY(17deg);
-  box-shadow: 6px -5px 10px rgba(0, 0, 0, 0.4);
-}
-.drum-pedal-back {
-  position: absolute;
-  top: 421px;
-  left: 412px;
-  border-color: $pedaldark;
-  border-style: solid;
-  border-width: 4px 3px 15px 3px;
-  border-radius: 5%;
-  width: 40px;
-  height: 15px;
-  box-shadow: inset 3px 3px 1px -2px rgba(0,0,0,0.5), 3px 1px 4px -2px rgba(0,0,0,0.5);
-}
-
-.drum-beater {
-  position: absolute;
-  top: 388px;
-  left: 413px;
-  transform: rotate(-53deg);
-}
-.beater-stick {
-  height: 48px;
-  width: 6px;
-  background: $pedaldark;
-  border-radius: 3px;
-}
-.beater-head {
-  position: absolute;
-  top: -13px;
-  left: -7px;
-  height: 20px;
-  width: 20px;
-  border-radius: 35%;
-  background: $pedaldark;
-  box-shadow: inset -1px 4px 4px -1px rgba(255, 255, 255, 0.6);
-}
-/* ////// */
-
 %drumkickclip-shared {
   // @include rotate(6deg);
   background: $drumborder;
@@ -611,6 +573,115 @@ svg {
   left: 85px;
   top: -86px;
   filter: blur(10px);
+}
+
+/*//  JS keydown – kick drum - move up  //*/
+
+@keyframes transformUp {
+  0%   {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.moveUp {
+  animation: transformUp 0.15s;
+  animation-delay: 0.1s;
+}
+
+/* //// DRUM PEDAL  //// */
+
+.drum-pedal {
+  background: $drumborder;
+  position: absolute;
+  top: 471px;
+  left: 394px;
+  width: 61px;
+  height: 25px;
+  border-radius: 4px;
+  transform: rotate(-87deg) skewY(7deg);
+  box-shadow: inset -2px 2px 1px 1px rgba(255,255,255,0.5);
+}
+.drum-pedal-edge {
+  position: absolute;
+  top: 471px;
+  left: 400px;
+  background: $pedaldark;
+  width: 59px;
+  height: 25px;
+  border-radius: 4px;
+  transform: rotate(91deg) skewY(17deg);
+  box-shadow: 6px -5px 10px rgba(0, 0, 0, 0.4);
+}
+.drum-pedal-back {
+  position: absolute;
+  top: 421px;
+  left: 412px;
+  border-color: $pedaldark;
+  border-style: solid;
+  border-width: 4px 3px 15px 3px;
+  border-radius: 5%;
+  width: 40px;
+  height: 15px;
+  box-shadow: inset 3px 3px 1px -2px rgba(0,0,0,0.5), 3px 1px 4px -2px rgba(0,0,0,0.5);
+}
+
+.drum-beater {
+  position: absolute;
+  top: 388px;
+  left: 413px;
+  transform: rotate(-53deg);
+}
+.beater-stick {
+  height: 48px;
+  width: 6px;
+  background: $pedaldark;
+  border-radius: 3px;
+}
+.beater-head {
+  position: absolute;
+  top: -13px;
+  left: -7px;
+  height: 20px;
+  width: 20px;
+  border-radius: 35%;
+  background: $pedaldark;
+  box-shadow: inset -1px 4px 4px -1px rgba(255, 255, 255, 0.6);
+}
+
+/*//  JS keydown – drum pedal and beater – animation  //*/
+
+@keyframes transformPedal {
+  0% {
+    left: 394px;
+    transform: rotate(-87deg) skewY(7deg);
+  }
+  100% {
+    left: 396px;
+    transform: rotate(-87deg) skewY(11deg);
+  }
+}
+.pedalDown {
+  animation: transformPedal 0.15s;
+}
+
+@keyframes transformBeater {
+  0% {
+    left: 413px;
+    top: 388px;
+    transform: rotate(-53deg);
+  }
+  100% {
+    left: 429px;
+    top: 380px;
+    transform: rotate(-7deg);
+  }
+}
+
+.beaterHit {
+  animation: transformBeater 0.15s;
 }
 
 
@@ -773,12 +844,10 @@ svg {
 }
 
 
-/* add class on keydown */
-.playing {
-  transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
-}
+
+
+
+
 
 
 ///////////////////////////////////////////////////
