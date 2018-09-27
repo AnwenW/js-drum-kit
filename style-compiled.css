@@ -26,12 +26,12 @@ svg {
   font-family: monospace;
   position: absolute;
 }
-/* .play {
+/* .text-play {
   transform: rotate(-15deg);
   top: 364px;
   left: 32px;
 }
-.thedrums {
+.text-thedrums {
   transform: rotate(-9deg);
   top: 416px;
   left: 30px;
@@ -45,6 +45,7 @@ svg {
   border: 2.5px solid #1c242d;
   border-radius: 15px;
   font-size: 49px;
+  line-height: 1.18;
   /* font-family: monospace; */
   text-align: center;
   position: absolute;
@@ -92,7 +93,7 @@ svg {
 /* /////// LEFT CYMBAL x2 - HIHAT - OPENHAT /////// */
 .cymbal-hihat {
   position: absolute;
-  transition: transform 0.2s;
+  transition: transform 0.15s;
   top: 108px;
   left: 20px;
 }
@@ -101,7 +102,7 @@ svg {
 }
 .cymbal-openhat {
   position: absolute;
-  transition: transform 0.2s;
+  transition: transform 0.15s;
   top: 0px;
   left: 125px;
 }
@@ -155,7 +156,7 @@ svg {
 /* ////// RIGHT CYMBAL - RIDE /////// */
 .cymbal-ride {
   position: absolute;
-  transition: transform 0.2s;
+  transition: transform 0.15s;
   top: 3px;
   left: 520px;
 }
@@ -232,7 +233,7 @@ svg {
 /* ////// LEFT DRUM - TOM /////// */
 .drum-tom {
   position: absolute;
-  transition: transform 0.2s;
+  transition: transform 0.15s;
   top: 101px;
   left: 256px;
 }
@@ -282,7 +283,7 @@ svg {
 /* ////// LEFT DRUM - SNARE /////// */
 .drum-snare {
   position: absolute;
-  transition: transform 0.2s;
+  transition: transform 0.15s;
   top: 225px;
   left: 145px;
 }
@@ -333,17 +334,18 @@ svg {
 /* //////// CENTRE DRUM - KICK  /////// */
 .drum-kick {
   position: absolute;
-  /* transition: transform 0.2s; */
-  /* animation-delay: 0.15s; */
+  transition: transform 0.15s;
+  transition-delay: 0.06s;
+  animation-delay: 0.13s;
   top: 336px;
   left: 303px;
 }
-/* .drum-kick:hover {
+.drum-kick:hover {
   transform: translateY(-5px);
-} */
+}
 
 
-/* .drum-kick:hover ~ .drum-pedal {
+.drum-kick:hover ~ .drum-pedal {
   left: 396px;
   transform: rotate(-87deg) skewY(11deg);
 }
@@ -351,7 +353,8 @@ svg {
   left: 429px;
   top: 380px;
   transform: rotate(-7deg);
-} */
+}
+
 .drum-kick-skin {
   transform: rotate(184deg);
   background: #fff8ed;
@@ -470,7 +473,7 @@ svg {
 /* /////  RIGHT DRUM - TOM2  /////// */
 .drum-tom2 {
   position: absolute;
-  transition: transform 0.2s;
+  transition: transform 0.15s;
   top: 100px;
   left: 445px;
 }
@@ -520,7 +523,7 @@ svg {
 /* /////  RIGHT DRUM - BOOM  /////// */
 .drum-boom {
   position: absolute;
-  transition: transform 0.2s;
+  transition: transform 0.15s;
   top: 259px;
   left: 557px;
 }
@@ -620,7 +623,7 @@ svg {
 }
 
 .moveDown {
-  animation: transformDown 0.2s;
+  animation: transformDown 0.15s;
 }
 
 @keyframes transformPedal {

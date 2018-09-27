@@ -50,13 +50,13 @@ svg {
   position: absolute;
 }
 
-.play {
+.text-play {
   transform: rotate(-15deg);
   top: 364px;
   left: 32px;
 }
 
-.thedrums {
+.text-thedrums {
   transform: rotate(-9deg);
   top: 416px;
   left: 30px;
@@ -70,7 +70,7 @@ svg {
   border: 2.5px solid $letter;
   border-radius: 15px;
   font-size: 49px;
-  // font-family: monospace;
+  line-height: 1.18;
   text-align: center;
   position: absolute;
   transition: all .07s ease; /* required for JS removeTransition */
@@ -140,7 +140,7 @@ svg {
 
 @mixin position-transition {
   position: absolute;
-  transition: transform 0.2s;
+  transition: transform 0.15s;
 }
 
 @mixin rotate($degrees) {
@@ -445,7 +445,8 @@ svg {
 
 .drum-kick {
   @include position-transition;
-  transition-delay: 0.1s;
+  transition-delay: 0.06s;
+  animation-delay: 0.13s;
   top: 336px;
   left: 303px;
   &:hover {

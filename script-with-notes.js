@@ -24,10 +24,10 @@ const keys = document.querySelectorAll('.key');
 
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-// window.addEventListener('keydown', playSound);
+window.addEventListener('keydown', playSound);
 
-// window.addEventListener('keydown', function drumTranslate(e) {
-function drumTranslate(e) {
+window.addEventListener('keydown', function drumTranslate(e) {
+// function drumTranslate(e) {
 
   const drumkick = document.querySelector('.drum-kick');
   const drumbeater = document.querySelector('.drum-beater');
@@ -127,15 +127,15 @@ function drumTranslate(e) {
 
                  } // closes final else if
 
-} // closes function drumTranslate
-// }) // closes window.eventListener / function drumTranslate (has extra bracket)
+// } // closes function drumTranslate
+}) // closes window.eventListener / function drumTranslate (has extra bracket)
 
-function combineFunctions(e) {
-  playSound(e);
-  drumTranslate(e);
-};
-
-window.addEventListener('keydown', combineFunctions);
+// function combineFunctions(e) {
+//   playSound(e);
+//   drumTranslate(e);
+// };
+//
+// window.addEventListener('keydown', combineFunctions);
 
 
 
