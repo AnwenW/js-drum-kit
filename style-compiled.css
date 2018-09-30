@@ -18,14 +18,27 @@ svg {
 }
 /* ///////  TITLE + LETTERS ///////// */
 .title {
-  background: rgba(255, 255, 255, 0.6);
-  color: #1c242d;
-  text-transform: uppercase;
-  padding: 5px 10px;
-  font-size: 34px;
-  font-family: monospace;
   position: absolute;
+  font-size: 34px;
+  color: #ffc600;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  font-family: 'Vampiro One', monospace;
+  text-shadow: 3px 5px 5px rgba(0,0,0,0.6);
 }
+
+.text-play {
+  transform: rotate(-6deg);
+  top: 425px;
+  left: 12px;
+}
+
+.text-thedrums {
+  transform: rotate(-2deg);
+  top: 456px;
+  left: 35px;
+}
+
 .letter-hihat, .letter-openhat, .letter-snare, .letter-tom, .letter-tom2, .letter-kick, .letter-ride, .letter-boom {
   /* extend/inheritance */
   width: 54px;
